@@ -38,7 +38,16 @@ export const Nav: FC = () => {
   console.log("User Photo URL:", user?.photoURL);
 
   return (
-    <nav className="w-full flex justify-end items-center py-2 px-6 bg-white border-b border-gray-200 relative z-[9999]">
+    <nav className="w-full flex justify-between items-center py-2 px-6 border-b border-gray-200 relative z-[9999]">
+      <div className="">
+        <h1 className="hidden sm:block text-2xl font-bold tracking-wide px-6 text-gray-700 dark:text-[#e2b6b6]">
+          Vesperal
+        </h1>
+        <h1 className="block sm:hidden text-xl font-bold text-[#7a4545] dark:text-[#e2b6b6] text-center">
+          V
+        </h1>
+      </div>
+
       {/* User Profile */}
       <div className="flex items-center">
         {user ? (

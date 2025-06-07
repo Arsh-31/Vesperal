@@ -39,7 +39,7 @@ export const Background = () => {
 
   return (
     <div
-      className="min-h-screen min-w-[64rem] flex flex-col justify-end p-4"
+      className="min-h-full min-w-[64rem] flex flex-col justify-end p-4"
       style={{
         backgroundImage: `url(${images[index].url})`,
         backgroundSize: "cover",

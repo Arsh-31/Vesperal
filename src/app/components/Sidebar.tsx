@@ -1,14 +1,19 @@
 "use client";
 
+import TimerIcon from "@mui/icons-material/Timer";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import TuneIcon from "@mui/icons-material/Tune";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import WallpaperIcon from "@mui/icons-material/Wallpaper";
 import { useSidebarStore } from "../lib/store";
 
 export const Sidebar = () => {
   const sidebarElements = [
-    { id: "pomodoro", name: "Pomodoro", icon: "🍅" },
-    { id: "todo", name: "Todo", icon: "📝" },
-    { id: "sounds", name: "Ambient Sounds", icon: "🌊" },
-    { id: "quote", name: "Quote", icon: "💬" },
-    { id: "background", name: "Change Background", icon: "🖼️" },
+    { id: "pomodoro", name: "Pomodoro", icon: TimerIcon },
+    { id: "todo", name: "Todo", icon: CheckCircleIcon },
+    { id: "sounds", name: "Ambient Sounds", icon: TuneIcon },
+    { id: "quote", name: "Quote", icon: FormatQuoteIcon },
+    { id: "background", name: "Change Background", icon: WallpaperIcon },
   ];
 
   const selected = useSidebarStore((state) => state.selected);
@@ -16,16 +21,6 @@ export const Sidebar = () => {
 
   return (
     <div className="bg-white h-screen dark:bg-gray-900 shadow-md p-2 sm:p-4 w-14 sm:w-64 transition-all duration-300">
-      {/* Vesperal Branding */}
-      <div className="mb-6 sm:mb-8 px-2 sm:px-3">
-        <h1 className="hidden sm:block text-2xl font-extrabold tracking-wide text-[#7a4545] dark:text-[#e2b6b6]">
-          Vesperal
-        </h1>
-        <h1 className="block sm:hidden text-xl font-bold text-[#7a4545] dark:text-[#e2b6b6] text-center">
-          V
-        </h1>
-      </div>
-
       {/* Sidebar Items */}
       {sidebarElements.map((element) => (
         <div
@@ -41,9 +36,9 @@ export const Sidebar = () => {
           }`}
         >
           <span role="img" aria-label={element.name} className="text-xl">
-            {element.icon}
+            <element.icon />
           </span>
-          <span className="hidden sm:inline text-base font-medium">
+          <span className="hidden sm:inline text-base font-medium pt-1">
             {element.name}
           </span>
         </div>
