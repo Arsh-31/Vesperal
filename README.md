@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vesperal – A Peaceful Productivity Experience
 
-## Getting Started
+**Vesperal** is a beautifully designed productivity web app that blends ambiance with focus-enhancing tools. Inspired by the calm and immersive essence of platforms like LifeAt.io, Vesperal is your personal space to stay organized, motivated, and centered — without distractions.
 
-First, run the development server:
+## Highlights
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Pomodoro Timer**  
+  Stay in rhythm with focused work sessions and short breaks using a clean, persistent Pomodoro timer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **To-Do Manager**  
+  A simple yet effective task list to help you organize and complete your daily goals.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Ambient Soundscapes**  
+  Choose from relaxing background sounds like rain, waterfall, and forest to enhance your focus.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Dynamic Scenic Backgrounds**  
+  Beautiful, calming images that adapt to your workspace — perfect for day or night.
 
-## Learn More
+- **Interactive Cat Widget** _(coming soon)_  
+  A cute companion to keep you company as you work or study.
 
-To learn more about Next.js, take a look at the following resources:
+- **Motivational Quotes**  
+  Get inspired with a fresh quote every session to uplift your mindset.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Built With
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js** – React framework for building the app
+- **TypeScript** – For robust, type-safe development
+- **Tailwind CSS** – Modern utility-first styling
+- **Zustand** – Minimal state management
