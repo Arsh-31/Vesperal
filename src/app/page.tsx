@@ -34,7 +34,7 @@ export default function Home() {
   if (!authenticated) {
     return (
       <div className="w-full flex justify-center items-center h-screen">
-        <p>You are not logged in. Redirecting to login...</p>
+        <p>Redirecting...</p>
       </div>
     );
   }

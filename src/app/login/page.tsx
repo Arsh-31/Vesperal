@@ -18,7 +18,7 @@ export default function LoginPage() {
   // const theme = useTheme();
   const handleLogin = async () => {
     await loginWithGoogle();
-    router.push("/");
+    // router.push("/");
   };
 
   return (

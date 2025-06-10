@@ -10,8 +10,8 @@
 - **To-Do Manager**  
   A simple yet effective task list to help you organize and complete your daily goals.
 
-- **Ambient Soundscapes**  
-  Choose from relaxing background sounds like rain, waterfall, and forest to enhance your focus.
+<!-- - **Ambient Soundscapes**
+  Choose from relaxing background sounds like rain, waterfall, and forest to enhance your focus. -->
 
 - **Dynamic Scenic Backgrounds**  
   Beautiful, calming images that adapt to your workspace — perfect for day or night.

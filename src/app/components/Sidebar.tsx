@@ -11,7 +11,7 @@ export const Sidebar = () => {
   const sidebarElements = [
     { id: "pomodoro", name: "Pomodoro", icon: TimerIcon },
     { id: "todo", name: "Todo", icon: CheckCircleIcon },
-    { id: "sounds", name: "Ambient Sounds", icon: TuneIcon },
+    // { id: "sounds", name: "Ambient Sounds", icon: TuneIcon },
     { id: "quote", name: "Quote", icon: FormatQuoteIcon },
     { id: "background", name: "Change Background", icon: WallpaperIcon },
   ];

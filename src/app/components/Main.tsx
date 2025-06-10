@@ -16,8 +16,8 @@ export const Main = () => {
         return <Pomodoro />;
       case "todo":
         return <Todo />;
-      case "sounds":
-        return <Sounds />;
+      // case "sounds":
+      //   return <Sounds />;
       case "quote":
         return <Quote />;
       case "background":
