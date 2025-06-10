@@ -3,20 +3,21 @@ import {
   doc,
   setDoc,
   getDoc,
-  updateDoc,
-  arrayUnion,
-  arrayRemove,
   onSnapshot,
-  query,
-  where,
-  getDocs,
 } from "firebase/firestore";
 import { db } from "./firebase";
 
 const todosCollection = collection(db, "todos");
 
 // Save or update user's todos (overwrite)
-export const saveUserTodos = async (userId: string, todos: any[]) => {
+type Todo = {
+  id: string;
+  title: string;
+  completed: boolean;
+  // Add other fields as needed
+};
+
+export const saveUserTodos = async (userId: string, todos: Todo[]) => {
   await setDoc(doc(todosCollection, userId), { todos });
 };
 
@@ -33,12 +34,12 @@ export const getUserTodos = async (userId: string) => {
 // Real-time listener for user's todos
 export const subscribeUserTodos = (
   userId: string,
-  callback: (todos: any[]) => void
+  callback: (todos: Todo[]) => void
 ) => {
   const docRef = doc(todosCollection, userId);
   return onSnapshot(docRef, (docSnap) => {
     if (docSnap.exists()) {
-      callback(docSnap.data().todos);
+      callback(docSnap.data().todos as Todo[]);
     } else {
       callback([]);
     }
