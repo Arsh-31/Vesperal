@@ -9,7 +9,7 @@ const images = [
   },
   {
     id: 2,
-    url: "https://i.pinimg.com/736x/15/38/e3/1538e31361003cdd0f0de2e0bb81df73.jpg",
+    url: "https://i.pinimg.com/736x/47/91/98/479198d44740a0b412a87721b5aa3340.jpg",
   },
   {
     id: 3,
@@ -22,6 +22,14 @@ const images = [
   {
     id: 5,
     url: "https://i.pinimg.com/736x/0f/8c/e4/0f8ce457af95c7ba437c026798c5c0cc.jpg",
+  },
+  {
+    id: 6,
+    url: "https://i.pinimg.com/736x/05/5d/b7/055db7c98b1f4866e512516d159bce1b.jpg",
+  },
+  {
+    id: 7,
+    url: "https://i.pinimg.com/736x/cf/c7/30/cfc730c2b5898c5a0db3f6de2492b729.jpg",
   },
 ];
 
