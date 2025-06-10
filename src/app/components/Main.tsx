@@ -4,7 +4,7 @@ import { Background } from "./Background";
 import { DefaultBackground } from "./DefaultBackground";
 import { Pomodoro } from "./Pomodoro";
 import { Quote } from "./Quote";
-import { Sounds } from "./Sounds";
+// import { Sounds } from "./Sounds";
 import { Todo } from "./Todo";
 
 export const Main = () => {

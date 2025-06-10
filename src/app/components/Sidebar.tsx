@@ -2,7 +2,7 @@
 
 import TimerIcon from "@mui/icons-material/Timer";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import TuneIcon from "@mui/icons-material/Tune";
+// import TuneIcon from "@mui/icons-material/Tune";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import WallpaperIcon from "@mui/icons-material/Wallpaper";
 import { useSidebarStore } from "../lib/store";
