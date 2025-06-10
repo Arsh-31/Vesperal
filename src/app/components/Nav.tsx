@@ -2,7 +2,6 @@
 
 import { FC, useEffect, useState } from "react";
 import { onAuthStateChanged, signOut, User } from "firebase/auth";
-
 import { AccountCircle, ExitToApp, ArrowDropDown } from "@mui/icons-material";
 import { Avatar, Menu, MenuItem } from "@mui/material";
 import { auth } from "../lib/firebase";
@@ -35,15 +34,14 @@ export const Nav: FC = () => {
       console.error("Logout error:", error);
     }
   };
-  console.log("User Photo URL:", user?.photoURL);
 
   return (
-    <nav className="w-full flex justify-between items-center py-2 px-6 border-b border-gray-200 relative z-[9999]">
-      <div className="">
-        <h1 className="hidden sm:block text-2xl font-bold tracking-wide px-6 text-gray-700 dark:text-[#e2b6b6]">
+    <nav className="w-full flex justify-between items-center py-2 px-6 border-b border-[#f4d7d7] dark:border-[#3c2d2d] bg-[#fef6f6] dark:bg-[#2b2222] relative z-[9999]">
+      <div>
+        <h1 className="hidden sm:block text-2xl font-bold tracking-wide text-[#6b4c4c] dark:text-[#f4d6d6]">
           Vesperal
         </h1>
-        <h1 className="block sm:hidden text-xl font-bold text-[#7a4545] dark:text-[#e2b6b6] text-center">
+        <h1 className="block sm:hidden text-xl font-bold text-[#6b4c4c] dark:text-[#f4d6d6] text-center">
           V
         </h1>
       </div>
@@ -61,12 +59,12 @@ export const Nav: FC = () => {
                 alt={user.displayName || "User"}
                 className="w-8 h-8"
               >
-                {!user.photoURL && <AccountCircle className="text-gray-400" />}
+                {!user.photoURL && <AccountCircle className="text-[#b28d8d]" />}
               </Avatar>
-              <span className="ml-2 text-sm font-medium text-gray-700">
+              <span className="ml-2 text-sm font-medium text-[#6b4c4c] dark:text-[#f4d6d6]">
                 {user.displayName || "User"}
               </span>
-              <ArrowDropDown className="text-gray-500" />
+              <ArrowDropDown className="text-[#9e7d7d] dark:text-[#c5a3a3]" />
             </div>
 
             <Menu
@@ -79,6 +77,7 @@ export const Nav: FC = () => {
                   overflow: "visible",
                   filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.1))",
                   mt: 1.5,
+                  bgcolor: "#fffaf9",
                   "& .MuiAvatar-root": {
                     width: 32,
                     height: 32,
@@ -103,13 +102,13 @@ export const Nav: FC = () => {
               anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
               <MenuItem onClick={handleLogout}>
-                <ExitToApp fontSize="small" className="mr-2 text-gray-500" />
-                <span className="text-gray-700">Logout</span>
+                <ExitToApp fontSize="small" className="mr-2 text-[#a97a7a]" />
+                <span className="text-[#6b4c4c] font-medium">Logout</span>
               </MenuItem>
             </Menu>
           </>
         ) : (
-          <div className="text-sm text-gray-500">Not signed in</div>
+          <div className="text-sm text-[#8e6c6c]">Not signed in</div>
         )}
       </div>
     </nav>

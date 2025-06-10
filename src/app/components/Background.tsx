@@ -39,16 +39,19 @@ export const Background = () => {
 
   return (
     <div
-      className="min-h-full min-w-[64rem] flex flex-col justify-end p-4"
+      className="relative min-h-full min-w-[64rem] flex flex-col justify-end p-4"
       style={{
         backgroundImage: `url(${images[index].url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
+      {/* Only show overlay in dark mode */}
+      <div className="absolute inset-0 hidden dark:block bg-black/40 z-0" />
+
       <button
         onClick={nextImage}
-        className="px-6 py-2 bg-[#b39f9f] hover:bg-[#a38686] text-white rounded-xl text-base font-semibold transition self-end"
+        className="relative z-10 px-6 py-2 bg-[#b39f9f] dark:bg-[#5c3b3b] hover:bg-[#a38686] dark:hover:bg-[#6a4c4c] text-white rounded-xl text-base font-semibold transition self-end"
       >
         Change Background
       </button>

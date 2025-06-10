@@ -2,7 +2,6 @@
 import { useSidebarStore } from "../lib/store";
 import { Background } from "./Background";
 import { DefaultBackground } from "./DefaultBackground";
-import { Nav } from "./Nav";
 import { Pomodoro } from "./Pomodoro";
 import { Quote } from "./Quote";
 import { Sounds } from "./Sounds";
@@ -30,8 +29,6 @@ export const Main = () => {
 
   return (
     <div className="relative flex-1 h-full overflow-hidden text-black">
-      {/* <Nav /> */}
-      {/* Background stays fixed behind everything */}
       <DefaultBackground />
 
       {/* Foreground component */}

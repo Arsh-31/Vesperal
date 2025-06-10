@@ -40,16 +40,8 @@ export default function Home() {
   }
 
   return (
-    // <div className="">
-    //   <Nav />
-    //   <div className="flex md:flex-row h-full w-full overflow-hidden font-inter">
-    //     <Sidebar />
-    //     <Main />
-    //   </div>
-    // </div>
     <div className="flex flex-col h-screen font-inter">
       <Nav />
-
       <div className="flex flex-1 overflow-hidden md:flex-row">
         <Sidebar />
         <Main />
