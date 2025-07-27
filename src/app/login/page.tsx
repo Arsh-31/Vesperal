@@ -15,26 +15,30 @@ export default function LoginPage() {
     return () => unsubscribe();
   }, [router]);
 
-  // const theme = useTheme();
   const handleLogin = async () => {
     await loginWithGoogle();
-    // router.push("/");
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-pink-100 dark:bg-gray-900">
-      <div className="bg-white dark:bg-zinc-800 p-8 rounded-2xl shadow-xl text-center space-y-6 max-w-md w-full">
-        <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
+    <div
+      className="flex items-center justify-center min-h-screen"
+      style={{ backgroundColor: "#272030" }}
+    >
+      <div className="p-8 rounded-md shadow-lg text-center space-y-5 max-w-md w-full bg-[#e3ebf2]">
+        <h1 className="text-3xl font-bold" style={{ color: "#272030" }}>
           Welcome to LifeAt
         </h1>
-        <p className="text-gray-600 dark:text-gray-300">
+
+        <p className="text-sm" style={{ color: "#272030", opacity: 0.7 }}>
           Log in to start your aesthetic productivity journey.
         </p>
+
         <button
           onClick={handleLogin}
-          className="px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-xl font-semibold transition"
+          className="px-6 py-3 rounded-sm font-medium shadow-sm hover:shadow-md transform hover:scale-102 transition-all duration-150"
+          style={{ backgroundColor: "#272030", color: "#e3ebf2" }}
         >
-          Login with Google
+          Sign in with Google
         </button>
       </div>
     </div>

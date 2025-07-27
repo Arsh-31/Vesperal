@@ -36,12 +36,12 @@ export const Nav: FC = () => {
   };
 
   return (
-    <nav className="w-full flex justify-between items-center py-2 px-6 border-b border-[#f4d7d7] dark:border-[#3c2d2d] bg-[#fef6f6] dark:bg-[#2b2222] relative z-[9999]">
+    <nav className="w-full flex justify-between items-center py-2 px-6 bg-[#272030] relative z-[9999]">
       <div>
-        <h1 className="hidden sm:block text-2xl font-bold tracking-wide text-[#6b4c4c] dark:text-[#f4d6d6]">
+        <h1 className="hidden sm:block text-xl font-bold tracking-wide text-[#e3ebf2]">
           Vesperal
         </h1>
-        <h1 className="block sm:hidden text-xl font-bold text-[#6b4c4c] dark:text-[#f4d6d6] text-center">
+        <h1 className="block sm:hidden text-xl font-bold text-[#e3ebf2] text-center">
           V
         </h1>
       </div>
@@ -61,10 +61,10 @@ export const Nav: FC = () => {
               >
                 {!user.photoURL && <AccountCircle className="text-[#b28d8d]" />}
               </Avatar>
-              <span className="ml-2 text-sm font-medium text-[#6b4c4c] dark:text-[#f4d6d6]">
+              <span className="ml-2 text-sm font-medium text-[#e3ebf2]">
                 {user.displayName || "User"}
               </span>
-              <ArrowDropDown className="text-[#9e7d7d] dark:text-[#c5a3a3]" />
+              <ArrowDropDown className="text-[#e3ebf2]" />
             </div>
 
             <Menu
@@ -102,13 +102,13 @@ export const Nav: FC = () => {
               anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
               <MenuItem onClick={handleLogout}>
-                <ExitToApp fontSize="small" className="mr-2 text-[#a97a7a]" />
-                <span className="text-[#6b4c4c] font-medium">Logout</span>
+                <ExitToApp fontSize="small" className="mr-2 text-[#272030]" />
+                <span className="text-[#272030] font-medium">Logout</span>
               </MenuItem>
             </Menu>
           </>
         ) : (
-          <div className="text-sm text-[#8e6c6c]">Not signed in</div>
+          <div className="text-sm text-[#e3ebf2]">Not signed in</div>
         )}
       </div>
     </nav>

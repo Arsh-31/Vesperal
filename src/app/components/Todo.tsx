@@ -64,24 +64,22 @@ export const Todo = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen p-4">
-      <div className="w-full max-w-md bg-[#fef6f6] dark:bg-[#2b2222] p-6 sm:p-8 rounded-2xl shadow-lg flex flex-col gap-6 text-center">
-        <h2 className="text-2xl font-semibold text-[#7e4a4a] dark:text-[#f4d6d6]">
-          To-Do List
-        </h2>
+      <div className="w-full max-w-md bg-[#272030] p-6 sm:p-8 rounded-md shadow-lg flex flex-col gap-6 text-center">
+        <h2 className="text-2xl font-semibold text-[#e3ebf2]">To-Do List</h2>
 
         {/* Input */}
         <div className="flex gap-2">
           <input
             type="text"
             placeholder="Add new task..."
-            className="flex-grow px-4 py-2 rounded-lg border border-[#e7c6c6] dark:border-[#553838] bg-[#fffafa] dark:bg-[#3a2d2d] text-[#7e4a4a] dark:text-[#f4d6d6] focus:outline-none focus:ring-2 focus:ring-[#d49999]"
+            className="flex-grow px-4 py-2 rounded-sm border border-[#272030] bg-[#e3ebf2] text-[#272030] focus:outline-none focus:ring-2 focus:ring-[#3b0a0a]"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && addTask()}
           />
           <button
             onClick={addTask}
-            className="px-4 py-2 bg-[#b39f9f] hover:bg-[#a38686] text-white rounded-lg font-semibold transition"
+            className="px-4 py-2 bg-[#e3ebf2] text-[#272030] rounded-sm font-semibold transition"
             aria-label="Add Task"
           >
             Add
@@ -89,11 +87,9 @@ export const Todo = () => {
         </div>
 
         {/* Task List */}
-        <ul className="max-h-60 overflow-y-auto divide-y divide-[#ecdada] dark:divide-[#553838]">
+        <ul className="max-h-60 overflow-y-auto divide-y divide-[#e3ebf2]">
           {tasks.length === 0 && (
-            <li className="text-[#a78686] dark:text-[#a78f8f] text-center py-4">
-              No tasks yet
-            </li>
+            <li className="text-[#e3ebf2] text-center py-4">No tasks yet</li>
           )}
 
           {tasks.map(({ id, text, completed }) => (
@@ -104,16 +100,14 @@ export const Todo = () => {
             >
               <label
                 className={`flex items-center cursor-pointer select-none gap-3 flex-grow ${
-                  completed
-                    ? "line-through text-[#bda9a9] dark:text-[#6f4c4c]"
-                    : "text-[#7e4a4a] dark:text-[#f4d6d6]"
+                  completed ? "line-through text-[#e3ebf2]" : "text-[#e3ebf2] "
                 }`}
               >
                 <input
                   type="checkbox"
                   checked={completed}
                   onChange={() => toggleTask(id, completed)}
-                  className="w-5 h-5 rounded border-[#b39f9f] dark:border-[#8b6f6f] text-[#d49999] focus:ring-[#d49999]"
+                  className="w-5 h-5 rounded border-[#b39f9f] text-[#e3ebf2] focus:ring-[#d49999]"
                 />
                 <span>{text}</span>
               </label>
@@ -121,7 +115,7 @@ export const Todo = () => {
               <button
                 onClick={() => deleteTask(id)}
                 aria-label={`Delete task: ${text}`}
-                className="ml-4 text-[#d76c6c] hover:text-[#b34747] transition text-lg"
+                className="ml-4 text-[#e3ebf2] transition text-lg"
               >
                 &times;
               </button>

@@ -20,19 +20,19 @@ export const Sidebar = () => {
   const setSelected = useSidebarStore((state) => state.setSelected);
 
   return (
-    <div className="bg-[#fef6f6] dark:bg-[#2b2222] h-screen shadow-md p-2 sm:p-4 w-14 sm:w-64 transition-all duration-300">
+    <div className="bg-[#272030] h-screen shadow-md p-2 sm:p-4 w-14 sm:w-64 transition-all duration-300 border-t-[1px] border-[#3b0a0a]">
       {/* Sidebar Items */}
       {sidebarElements.map((element) => (
         <div
           onClick={() => setSelected(element.id)}
           key={element.id}
           className={`flex items-center gap-3 sm:gap-4 p-2 my-1
-          text-[#6b4c4c] dark:text-[#e2b6b6]
+          text-[#e3ebf2]
           rounded-lg cursor-pointer transition-all duration-200
-          hover:bg-[#f7eaea] dark:hover:bg-[#3c2d2d]
+          hover:bg-[#3b0a0a]
           ${
             selected === element.id
-              ? "bg-[#f4d7d7] dark:bg-[#5c3b3b] font-semibold shadow-inner text-[#7a4545] dark:text-[#f4d6d6]"
+              ? "bg-[#272030] font-semibold shadow-inner text-[#e3ebf2]"
               : ""
           }`}
         >

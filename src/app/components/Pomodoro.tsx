@@ -94,35 +94,36 @@ export const Pomodoro = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen p-4">
-      <div className="w-full max-w-md bg-[#fef6f6] dark:bg-[#2b2222] p-6 sm:p-8 rounded-2xl shadow-lg flex flex-col items-center justify-center space-y-6 text-center">
-        <span className="px-4 py-1 rounded-full bg-[#e7c6c6] dark:bg-[#553838] text-[#7e4a4a] dark:text-[#d9bcbc] font-medium text-sm uppercase tracking-widest">
+      <div className="w-full max-w-md bg-[#272030] p-6 sm:p-8 rounded-md shadow-lg flex flex-col items-center justify-center space-y-6 text-center">
+        <span
+          className="px-4 py-1 rounded-sm bg-[#e3ebf2] text-[#272030]
+          font-medium text-sm uppercase tracking-widest"
+        >
           {displayLabel[mode]}
         </span>
 
-        <div className="text-7xl sm:text-8xl font-mono text-[#6b4c4c] dark:text-[#f4d6d6]">
+        <div className="text-7xl sm:text-8xl font-mono text-[#e3ebf2]">
           {formatTime(timeLeft)}
         </div>
 
         <div className="flex gap-4 mt-2">
           <button
             onClick={handleStartPause}
-            className="px-5 py-2.5 bg-[#b39f9f] hover:bg-[#a38686] text-white rounded-xl text-base font-semibold transition"
+            className="cursor-pointer px-5 py-2.5 bg-[#e3ebf2] text-[#272030] rounded-sm text-base font-semibold transition"
           >
             {isRunning ? "Pause" : "Start"}
           </button>
           <button
             onClick={handleReset}
-            className="px-5 py-2.5 bg-[#d49999] hover:bg-[#c47f7f] text-white rounded-xl text-base font-semibold transition"
+            className="cursor-pointer px-5 py-2.5 bg-[#e3ebf2] text-[#272030] rounded-sm text-base font-semibold transition"
           >
             Reset
           </button>
         </div>
 
-        <p className="text-sm text-[#7e5b5b] dark:text-[#bda9a9]">
+        <p className="text-sm text-[#e3ebf2]">
           Sessions Completed:{" "}
-          <span className="font-semibold text-[#8a5c5c] dark:text-[#d6a6a6]">
-            {sessionCount}
-          </span>
+          <span className="font-semibold text-[#e3ebf2]">{sessionCount}</span>
         </p>
       </div>
     </div>

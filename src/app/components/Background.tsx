@@ -59,7 +59,7 @@ export const Background = () => {
 
       <button
         onClick={nextImage}
-        className="relative z-10 px-6 py-2 bg-[#b39f9f] dark:bg-[#5c3b3b] hover:bg-[#a38686] dark:hover:bg-[#6a4c4c] text-white rounded-xl text-base font-semibold transition self-end"
+        className="relative z-10 px-6 py-2 bg-[#272030] text-[#e3ebf2] rounded-md text-base font-semibold transition self-end"
       >
         Change Background
       </button>
