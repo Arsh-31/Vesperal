@@ -26,7 +26,7 @@ export default function LoginPage() {
     >
       <div className="p-8 rounded-md shadow-lg text-center space-y-5 max-w-md w-full bg-[#e3ebf2]">
         <h1 className="text-3xl font-bold" style={{ color: "#272030" }}>
-          Welcome to LifeAt
+          Welcome to Vesperal
         </h1>
 
         <p className="text-sm" style={{ color: "#272030", opacity: 0.7 }}>
