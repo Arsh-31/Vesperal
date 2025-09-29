@@ -30,7 +30,7 @@ export default function LoginPage() {
         </h1>
 
         <p className="text-sm" style={{ color: "#272030", opacity: 0.7 }}>
-          Log in to start your aesthetic productivity journey.
+          Sign in to start your aesthetic productivity journey.
         </p>
 
         <button
