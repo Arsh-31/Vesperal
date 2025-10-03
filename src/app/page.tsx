@@ -28,7 +28,11 @@ export default function Home() {
   }, [router]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="w-full flex justify-center items-center h-screen">
+        Loading...
+      </div>
+    );
   }
 
   if (!authenticated) {
